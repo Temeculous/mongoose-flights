@@ -13,17 +13,12 @@
   <tbody>
     <% flights.forEach((flight) => {%>
     <tr>
-      <%= flight.airline %>
+      <td><%= flight.airline %></td>
+      <td><%= flight.airport %></td>
+      <td><%= flight.flightNo %></td>
+      <td><%= flight.departs %></td>
     </tr>
-    <tr>
-      <%= flight.airport %>
-    </tr>
-    <tr>
-      <%= flight.flightNo %>
-    </tr>
-    <tr>
-      <%= flight.depart %>
-    </tr>
+    <% }); %>
   </tbody>
 </table>
-<% }) %> <%- include('./partials/footer') %>
+<%- include('./partials/footer') %>

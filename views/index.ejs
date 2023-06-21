@@ -1,4 +1,29 @@
 <%- include('./partials/header') %>
-    <h1><%= title %></h1>
-    <p>The list of Flights</p>
-    <%- include('./partials/footer') %>
+<h1><%= title %></h1>
+<p>The list of Flights</p>
+<table>
+  <thead>
+    <tr>
+      <th>Airline</th>
+      <th>Airport</th>
+      <th>Flight Num</th>
+      <th>Departure</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% flights.forEach((flight) => {%>
+    <tr>
+      <%= flight.airline %>
+    </tr>
+    <tr>
+      <%= flight.airport %>
+    </tr>
+    <tr>
+      <%= flight.flightNo %>
+    </tr>
+    <tr>
+      <%= flight.depart %>
+    </tr>
+  </tbody>
+</table>
+<% }) %> <%- include('./partials/footer') %>
